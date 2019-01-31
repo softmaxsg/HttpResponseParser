@@ -1,0 +1,3 @@
+[submodule "AnyCodable"]
+	path = AnyCodable
+	url = git://github.com/Flight-School/AnyCodable.git

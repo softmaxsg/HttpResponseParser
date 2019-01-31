@@ -3,6 +3,7 @@
 //
 
 import XCTest
+import AnyCodable
 @testable import HttpResponseParser
 
 final class PayloadParserTests: XCTestCase {
@@ -18,7 +19,7 @@ final class PayloadParserTests: XCTestCase {
 
     func test_whenErrorIsDecoded_thenAppropriateErrorIsThrown() {
         let expectedResponseError = ResponseError.failure(message: .random())
-        let parser = PayloadParser(decoder: jsonDecoder(with: .error(expectedResponseError)))
+        let parser = PayloadParser(decoder: jsonDecoder(with: Response<PayloadMock>.error(expectedResponseError)))
         XCTAssertThrowsError(try parser.payload(from: expectedData) as PayloadMock, "Has to throw an error") { error in
             switch parserError(from: error) {
             case .requestFailed(let responseError):
@@ -70,12 +71,26 @@ final class PayloadParserTests: XCTestCase {
 
 }
 
+// MARK: Non-generic version
+extension PayloadParserTests {
+    
+    func test_whenNonGenericVersionIsUsed_thenCorrectPayloadIsReturned() {
+        let expectedPayload = PayloadMock.random()
+        let parser = PayloadParser(decoder: jsonDecoder(with: .payload(AnyCodable(expectedPayload))))
+        let payload = try! parser.payload(from: expectedData)
+        XCTAssertEqual(payload as? PayloadMock, expectedPayload)
+    }
+    
+    // Testing of error cases is redundant since throwing an error works the same way for both generic and non-generic versions
+    
+}
+
 private extension PayloadParserTests {
     
     enum MockError: Error, Equatable { case some }
     
-    func jsonDecoder(with response: Response<PayloadMock>, file: StaticString = #file, line: UInt = #line) -> JSONDecoderProtocol {
-        return JSONDecoderMock<Response<PayloadMock>> { data in
+    func jsonDecoder<T>(with response: Response<T>, file: StaticString = #file, line: UInt = #line) -> JSONDecoderProtocol {
+        return JSONDecoderMock<Response<T>> { data in
             XCTAssertEqual(data, self.expectedData, file: file, line: line)
             return response
         }

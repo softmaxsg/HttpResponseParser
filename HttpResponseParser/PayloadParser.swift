@@ -3,6 +3,7 @@
 //
 
 import Foundation
+import AnyCodable
 
 public final class PayloadParser {
 
@@ -36,6 +37,10 @@ public final class PayloadParser {
         } catch {
             throw Error.other(error)
         }
+    }
+    
+    func payload(from data: Data?) throws -> Any {
+        return (try payload(from: data) as AnyCodable).value
     }
     
 }

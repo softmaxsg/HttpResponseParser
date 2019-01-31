@@ -35,6 +35,20 @@
 			remoteGlobalIDString = D8A83EBA2202236D00A7375E;
 			remoteInfo = HttpResponseParser;
 		};
+		D8A83F362203A3AE00A7375E /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = D8A83F2F2203A3AE00A7375E /* AnyCodable.xcodeproj */;
+			proxyType = 2;
+			remoteGlobalIDString = "AnyCodable::AnyCodable::Product";
+			remoteInfo = AnyCodable;
+		};
+		D8A83F382203A3AE00A7375E /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = D8A83F2F2203A3AE00A7375E /* AnyCodable.xcodeproj */;
+			proxyType = 2;
+			remoteGlobalIDString = "AnyCodable::AnyCodableTests::Product";
+			remoteInfo = AnyCodableTests;
+		};
 /* End PBXContainerItemProxy section */
 
 /* Begin PBXFileReference section */
@@ -59,6 +73,7 @@
 		D8A83F0222038A4900A7375E /* LocalizedError+Helpers.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "LocalizedError+Helpers.swift"; sourceTree = "<group>"; };
 		D8A83F0722038D1F00A7375E /* en */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = en; path = en.lproj/Localizable.strings; sourceTree = "<group>"; };
 		D8A83F09220394A700A7375E /* PayloadParserErrorLocalizationTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PayloadParserErrorLocalizationTests.swift; sourceTree = "<group>"; };
+		D8A83F2F2203A3AE00A7375E /* AnyCodable.xcodeproj */ = {isa = PBXFileReference; lastKnownFileType = "wrapper.pb-project"; name = AnyCodable.xcodeproj; path = AnyCodable/AnyCodable.xcodeproj; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -83,6 +98,7 @@
 		D8A83EB12202236D00A7375E = {
 			isa = PBXGroup;
 			children = (
+				D8A83F2F2203A3AE00A7375E /* AnyCodable.xcodeproj */,
 				D8A83EBD2202236D00A7375E /* HttpResponseParser */,
 				D8A83EC82202236D00A7375E /* HttpResponseParserTests */,
 				D8A83EBC2202236D00A7375E /* Products */,
@@ -161,6 +177,15 @@
 				D8A83F0622038D1F00A7375E /* Localizable.strings */,
 			);
 			name = Localization;
+			sourceTree = "<group>";
+		};
+		D8A83F302203A3AE00A7375E /* Products */ = {
+			isa = PBXGroup;
+			children = (
+				D8A83F372203A3AE00A7375E /* AnyCodable.framework */,
+				D8A83F392203A3AE00A7375E /* AnyCodableTests.xctest */,
+			);
+			name = Products;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -243,6 +268,12 @@
 			mainGroup = D8A83EB12202236D00A7375E;
 			productRefGroup = D8A83EBC2202236D00A7375E /* Products */;
 			projectDirPath = "";
+			projectReferences = (
+				{
+					ProductGroup = D8A83F302203A3AE00A7375E /* Products */;
+					ProjectRef = D8A83F2F2203A3AE00A7375E /* AnyCodable.xcodeproj */;
+				},
+			);
 			projectRoot = "";
 			targets = (
 				D8A83EBA2202236D00A7375E /* HttpResponseParser */,
@@ -250,6 +281,23 @@
 			);
 		};
 /* End PBXProject section */
+
+/* Begin PBXReferenceProxy section */
+		D8A83F372203A3AE00A7375E /* AnyCodable.framework */ = {
+			isa = PBXReferenceProxy;
+			fileType = wrapper.framework;
+			path = AnyCodable.framework;
+			remoteRef = D8A83F362203A3AE00A7375E /* PBXContainerItemProxy */;
+			sourceTree = BUILT_PRODUCTS_DIR;
+		};
+		D8A83F392203A3AE00A7375E /* AnyCodableTests.xctest */ = {
+			isa = PBXReferenceProxy;
+			fileType = file;
+			path = AnyCodableTests.xctest;
+			remoteRef = D8A83F382203A3AE00A7375E /* PBXContainerItemProxy */;
+			sourceTree = BUILT_PRODUCTS_DIR;
+		};
+/* End PBXReferenceProxy section */
 
 /* Begin PBXResourcesBuildPhase section */
 		D8A83EB92202236D00A7375E /* Resources */ = {
