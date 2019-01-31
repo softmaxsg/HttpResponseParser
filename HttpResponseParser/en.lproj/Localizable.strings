@@ -1,0 +1,9 @@
+"error.payloadparser.data.invalid" = "The data is invalid and therefore couldn’t be parsed.";
+
+"error.payloadparser.request.failed" = "The request failed.";
+
+"error.payloadparser.decoding.failed" = "The response couldn't be decoded.";
+
+"error.payloadparser.other" = "Unexpected error occured.";
+
+"error.response.error.unknown" = "Details are not available.";

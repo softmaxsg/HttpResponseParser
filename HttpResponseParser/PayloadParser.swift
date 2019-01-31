@@ -39,3 +39,20 @@ public final class PayloadParser {
     }
     
 }
+
+extension PayloadParser.Error: LocalizedError {
+    
+    public var errorDescription: String? {
+        switch self {
+        case .invalidData:
+            return errorDescription(key: "error.payloadparser.data.invalid")
+        case .requestFailed(let error):
+            return errorDescription(key: "error.payloadparser.request.failed", underlying: error)
+        case .decodingFailed(let error):
+            return errorDescription(key: "error.payloadparser.decoding.failed", underlying: error)
+        case .other(let error):
+            return errorDescription(key: "error.payloadparser.other", underlying: error)
+        }
+    }
+
+}

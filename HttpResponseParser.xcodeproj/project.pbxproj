@@ -22,6 +22,9 @@
 		D8A83EF72202655900A7375E /* ResponseError+Helpers.swift in Sources */ = {isa = PBXBuildFile; fileRef = D8A83EF62202655900A7375E /* ResponseError+Helpers.swift */; };
 		D8A83EF922036BB600A7375E /* PayloadParserTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = D8A83EF822036BB600A7375E /* PayloadParserTests.swift */; };
 		D8A83EFB22036CAE00A7375E /* JSONDecoderMock.swift in Sources */ = {isa = PBXBuildFile; fileRef = D8A83EFA22036CAE00A7375E /* JSONDecoderMock.swift */; };
+		D8A83F0322038A4900A7375E /* LocalizedError+Helpers.swift in Sources */ = {isa = PBXBuildFile; fileRef = D8A83F0222038A4900A7375E /* LocalizedError+Helpers.swift */; };
+		D8A83F0822038D1F00A7375E /* Localizable.strings in Resources */ = {isa = PBXBuildFile; fileRef = D8A83F0622038D1F00A7375E /* Localizable.strings */; };
+		D8A83F0A220394A700A7375E /* PayloadParserErrorLocalizationTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = D8A83F09220394A700A7375E /* PayloadParserErrorLocalizationTests.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -53,6 +56,9 @@
 		D8A83EF62202655900A7375E /* ResponseError+Helpers.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "ResponseError+Helpers.swift"; sourceTree = "<group>"; };
 		D8A83EF822036BB600A7375E /* PayloadParserTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PayloadParserTests.swift; sourceTree = "<group>"; };
 		D8A83EFA22036CAE00A7375E /* JSONDecoderMock.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = JSONDecoderMock.swift; sourceTree = "<group>"; };
+		D8A83F0222038A4900A7375E /* LocalizedError+Helpers.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "LocalizedError+Helpers.swift"; sourceTree = "<group>"; };
+		D8A83F0722038D1F00A7375E /* en */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = en; path = en.lproj/Localizable.strings; sourceTree = "<group>"; };
+		D8A83F09220394A700A7375E /* PayloadParserErrorLocalizationTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PayloadParserErrorLocalizationTests.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -95,6 +101,7 @@
 		D8A83EBD2202236D00A7375E /* HttpResponseParser */ = {
 			isa = PBXGroup;
 			children = (
+				D8A83F0522038CDC00A7375E /* Localization */,
 				D8A83EDD22023A3300A7375E /* Core */,
 				D8A83EDE22023A3D00A7375E /* Models */,
 				D8A83EBE2202236D00A7375E /* HttpResponseParser.h */,
@@ -109,6 +116,7 @@
 			children = (
 				D8A83EE12202487E00A7375E /* Helpers */,
 				D8A83ECB2202236D00A7375E /* Info.plist */,
+				D8A83F09220394A700A7375E /* PayloadParserErrorLocalizationTests.swift */,
 				D8A83EF822036BB600A7375E /* PayloadParserTests.swift */,
 				D8A83ED72202255200A7375E /* ResponseDecodingTests.swift */,
 			);
@@ -120,6 +128,7 @@
 			children = (
 				D8A83EDB220239AE00A7375E /* JSONDecoderProtocol.swift */,
 				D8A83EDF22023E8600A7375E /* KeyedDecodingContainerProtocol+Helpers.swift */,
+				D8A83F0222038A4900A7375E /* LocalizedError+Helpers.swift */,
 			);
 			path = Core;
 			sourceTree = "<group>";
@@ -144,6 +153,14 @@
 				D8A83EE62202493900A7375E /* String+Random.swift */,
 			);
 			path = Helpers;
+			sourceTree = "<group>";
+		};
+		D8A83F0522038CDC00A7375E /* Localization */ = {
+			isa = PBXGroup;
+			children = (
+				D8A83F0622038D1F00A7375E /* Localizable.strings */,
+			);
+			name = Localization;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -239,6 +256,7 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				D8A83F0822038D1F00A7375E /* Localizable.strings in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -256,6 +274,7 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				D8A83F0322038A4900A7375E /* LocalizedError+Helpers.swift in Sources */,
 				D8A83EDC220239AE00A7375E /* JSONDecoderProtocol.swift in Sources */,
 				D8A83EDA2202366500A7375E /* Response.swift in Sources */,
 				D8A83EED2202519700A7375E /* ResponseError.swift in Sources */,
@@ -271,6 +290,7 @@
 				D8A83EE72202493900A7375E /* String+Random.swift in Sources */,
 				D8A83EF72202655900A7375E /* ResponseError+Helpers.swift in Sources */,
 				D8A83EFB22036CAE00A7375E /* JSONDecoderMock.swift in Sources */,
+				D8A83F0A220394A700A7375E /* PayloadParserErrorLocalizationTests.swift in Sources */,
 				D8A83EE5220248CF00A7375E /* PayloadMock.swift in Sources */,
 				D8A83EF322025A7900A7375E /* DecodingError+Helpers.swift in Sources */,
 				D8A83EEF2202537300A7375E /* Response+Helpers.swift in Sources */,
@@ -288,6 +308,17 @@
 			targetProxy = D8A83EC62202236D00A7375E /* PBXContainerItemProxy */;
 		};
 /* End PBXTargetDependency section */
+
+/* Begin PBXVariantGroup section */
+		D8A83F0622038D1F00A7375E /* Localizable.strings */ = {
+			isa = PBXVariantGroup;
+			children = (
+				D8A83F0722038D1F00A7375E /* en */,
+			);
+			name = Localizable.strings;
+			sourceTree = "<group>";
+		};
+/* End PBXVariantGroup section */
 
 /* Begin XCBuildConfiguration section */
 		D8A83ECD2202236E00A7375E /* Debug */ = {
