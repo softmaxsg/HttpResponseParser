@@ -9,6 +9,15 @@
 /* Begin PBXBuildFile section */
 		D8A83EC52202236D00A7375E /* HttpResponseParser.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = D8A83EBB2202236D00A7375E /* HttpResponseParser.framework */; };
 		D8A83ECC2202236E00A7375E /* HttpResponseParser.h in Headers */ = {isa = PBXBuildFile; fileRef = D8A83EBE2202236D00A7375E /* HttpResponseParser.h */; settings = {ATTRIBUTES = (Public, ); }; };
+		D8A83ED82202255200A7375E /* ResponseDecodingTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = D8A83ED72202255200A7375E /* ResponseDecodingTests.swift */; };
+		D8A83EDA2202366500A7375E /* Response.swift in Sources */ = {isa = PBXBuildFile; fileRef = D8A83ED92202366500A7375E /* Response.swift */; };
+		D8A83EE022023E8600A7375E /* KeyedDecodingContainerProtocol+Helpers.swift in Sources */ = {isa = PBXBuildFile; fileRef = D8A83EDF22023E8600A7375E /* KeyedDecodingContainerProtocol+Helpers.swift */; };
+		D8A83EE5220248CF00A7375E /* PayloadMock.swift in Sources */ = {isa = PBXBuildFile; fileRef = D8A83EE4220248CF00A7375E /* PayloadMock.swift */; };
+		D8A83EE72202493900A7375E /* String+Random.swift in Sources */ = {isa = PBXBuildFile; fileRef = D8A83EE62202493900A7375E /* String+Random.swift */; };
+		D8A83EED2202519700A7375E /* ResponseError.swift in Sources */ = {isa = PBXBuildFile; fileRef = D8A83EEC2202519700A7375E /* ResponseError.swift */; };
+		D8A83EEF2202537300A7375E /* Response+Helpers.swift in Sources */ = {isa = PBXBuildFile; fileRef = D8A83EEE2202537300A7375E /* Response+Helpers.swift */; };
+		D8A83EF322025A7900A7375E /* DecodingError+Helpers.swift in Sources */ = {isa = PBXBuildFile; fileRef = D8A83EF222025A7900A7375E /* DecodingError+Helpers.swift */; };
+		D8A83EF72202655900A7375E /* ResponseError+Helpers.swift in Sources */ = {isa = PBXBuildFile; fileRef = D8A83EF62202655900A7375E /* ResponseError+Helpers.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -27,6 +36,15 @@
 		D8A83EBF2202236D00A7375E /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		D8A83EC42202236D00A7375E /* HttpResponseParserTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = HttpResponseParserTests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
 		D8A83ECB2202236D00A7375E /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		D8A83ED72202255200A7375E /* ResponseDecodingTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ResponseDecodingTests.swift; sourceTree = "<group>"; };
+		D8A83ED92202366500A7375E /* Response.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Response.swift; sourceTree = "<group>"; };
+		D8A83EDF22023E8600A7375E /* KeyedDecodingContainerProtocol+Helpers.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "KeyedDecodingContainerProtocol+Helpers.swift"; sourceTree = "<group>"; };
+		D8A83EE4220248CF00A7375E /* PayloadMock.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PayloadMock.swift; sourceTree = "<group>"; };
+		D8A83EE62202493900A7375E /* String+Random.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "String+Random.swift"; sourceTree = "<group>"; };
+		D8A83EEC2202519700A7375E /* ResponseError.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ResponseError.swift; sourceTree = "<group>"; };
+		D8A83EEE2202537300A7375E /* Response+Helpers.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "Response+Helpers.swift"; sourceTree = "<group>"; };
+		D8A83EF222025A7900A7375E /* DecodingError+Helpers.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "DecodingError+Helpers.swift"; sourceTree = "<group>"; };
+		D8A83EF62202655900A7375E /* ResponseError+Helpers.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "ResponseError+Helpers.swift"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -69,6 +87,8 @@
 		D8A83EBD2202236D00A7375E /* HttpResponseParser */ = {
 			isa = PBXGroup;
 			children = (
+				D8A83EDD22023A3300A7375E /* Core */,
+				D8A83EDE22023A3D00A7375E /* Models */,
 				D8A83EBE2202236D00A7375E /* HttpResponseParser.h */,
 				D8A83EBF2202236D00A7375E /* Info.plist */,
 			);
@@ -78,9 +98,40 @@
 		D8A83EC82202236D00A7375E /* HttpResponseParserTests */ = {
 			isa = PBXGroup;
 			children = (
+				D8A83EE12202487E00A7375E /* Helpers */,
 				D8A83ECB2202236D00A7375E /* Info.plist */,
+				D8A83ED72202255200A7375E /* ResponseDecodingTests.swift */,
 			);
 			path = HttpResponseParserTests;
+			sourceTree = "<group>";
+		};
+		D8A83EDD22023A3300A7375E /* Core */ = {
+			isa = PBXGroup;
+			children = (
+				D8A83EDF22023E8600A7375E /* KeyedDecodingContainerProtocol+Helpers.swift */,
+			);
+			path = Core;
+			sourceTree = "<group>";
+		};
+		D8A83EDE22023A3D00A7375E /* Models */ = {
+			isa = PBXGroup;
+			children = (
+				D8A83ED92202366500A7375E /* Response.swift */,
+				D8A83EEC2202519700A7375E /* ResponseError.swift */,
+			);
+			path = Models;
+			sourceTree = "<group>";
+		};
+		D8A83EE12202487E00A7375E /* Helpers */ = {
+			isa = PBXGroup;
+			children = (
+				D8A83EF222025A7900A7375E /* DecodingError+Helpers.swift */,
+				D8A83EE4220248CF00A7375E /* PayloadMock.swift */,
+				D8A83EEE2202537300A7375E /* Response+Helpers.swift */,
+				D8A83EF62202655900A7375E /* ResponseError+Helpers.swift */,
+				D8A83EE62202493900A7375E /* String+Random.swift */,
+			);
+			path = Helpers;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -145,9 +196,11 @@
 				TargetAttributes = {
 					D8A83EBA2202236D00A7375E = {
 						CreatedOnToolsVersion = 10.1;
+						LastSwiftMigration = 1010;
 					};
 					D8A83EC32202236D00A7375E = {
 						CreatedOnToolsVersion = 10.1;
+						LastSwiftMigration = 1010;
 					};
 				};
 			};
@@ -191,6 +244,9 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				D8A83EDA2202366500A7375E /* Response.swift in Sources */,
+				D8A83EED2202519700A7375E /* ResponseError.swift in Sources */,
+				D8A83EE022023E8600A7375E /* KeyedDecodingContainerProtocol+Helpers.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -198,6 +254,12 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				D8A83EE72202493900A7375E /* String+Random.swift in Sources */,
+				D8A83EF72202655900A7375E /* ResponseError+Helpers.swift in Sources */,
+				D8A83EE5220248CF00A7375E /* PayloadMock.swift in Sources */,
+				D8A83EF322025A7900A7375E /* DecodingError+Helpers.swift in Sources */,
+				D8A83EEF2202537300A7375E /* Response+Helpers.swift in Sources */,
+				D8A83ED82202255200A7375E /* ResponseDecodingTests.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -337,6 +399,7 @@
 		D8A83ED02202236E00A7375E /* Debug */ = {
 			isa = XCBuildConfiguration;
 			buildSettings = {
+				CLANG_ENABLE_MODULES = YES;
 				CODE_SIGN_IDENTITY = "";
 				CODE_SIGN_STYLE = Automatic;
 				DEFINES_MODULE = YES;
@@ -353,6 +416,7 @@
 				PRODUCT_BUNDLE_IDENTIFIER = com.chupryk.HttpResponseParser;
 				PRODUCT_NAME = "$(TARGET_NAME:c99extidentifier)";
 				SKIP_INSTALL = YES;
+				SWIFT_OPTIMIZATION_LEVEL = "-Onone";
 				SWIFT_VERSION = 4.2;
 				TARGETED_DEVICE_FAMILY = "1,2";
 			};
@@ -361,6 +425,7 @@
 		D8A83ED12202236E00A7375E /* Release */ = {
 			isa = XCBuildConfiguration;
 			buildSettings = {
+				CLANG_ENABLE_MODULES = YES;
 				CODE_SIGN_IDENTITY = "";
 				CODE_SIGN_STYLE = Automatic;
 				DEFINES_MODULE = YES;
@@ -385,6 +450,8 @@
 		D8A83ED32202236E00A7375E /* Debug */ = {
 			isa = XCBuildConfiguration;
 			buildSettings = {
+				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
+				CLANG_ENABLE_MODULES = YES;
 				CODE_SIGN_STYLE = Automatic;
 				INFOPLIST_FILE = HttpResponseParserTests/Info.plist;
 				LD_RUNPATH_SEARCH_PATHS = (
@@ -394,6 +461,7 @@
 				);
 				PRODUCT_BUNDLE_IDENTIFIER = com.chupryk.HttpResponseParserTests;
 				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_OPTIMIZATION_LEVEL = "-Onone";
 				SWIFT_VERSION = 4.2;
 				TARGETED_DEVICE_FAMILY = "1,2";
 			};
@@ -402,6 +470,8 @@
 		D8A83ED42202236E00A7375E /* Release */ = {
 			isa = XCBuildConfiguration;
 			buildSettings = {
+				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
+				CLANG_ENABLE_MODULES = YES;
 				CODE_SIGN_STYLE = Automatic;
 				INFOPLIST_FILE = HttpResponseParserTests/Info.plist;
 				LD_RUNPATH_SEARCH_PATHS = (
