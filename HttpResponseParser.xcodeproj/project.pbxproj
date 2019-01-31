@@ -9,8 +9,10 @@
 /* Begin PBXBuildFile section */
 		D8A83EC52202236D00A7375E /* HttpResponseParser.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = D8A83EBB2202236D00A7375E /* HttpResponseParser.framework */; };
 		D8A83ECC2202236E00A7375E /* HttpResponseParser.h in Headers */ = {isa = PBXBuildFile; fileRef = D8A83EBE2202236D00A7375E /* HttpResponseParser.h */; settings = {ATTRIBUTES = (Public, ); }; };
+		D8A83ED62202245100A7375E /* PayloadParser.swift in Sources */ = {isa = PBXBuildFile; fileRef = D8A83ED52202245100A7375E /* PayloadParser.swift */; };
 		D8A83ED82202255200A7375E /* ResponseDecodingTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = D8A83ED72202255200A7375E /* ResponseDecodingTests.swift */; };
 		D8A83EDA2202366500A7375E /* Response.swift in Sources */ = {isa = PBXBuildFile; fileRef = D8A83ED92202366500A7375E /* Response.swift */; };
+		D8A83EDC220239AE00A7375E /* JSONDecoderProtocol.swift in Sources */ = {isa = PBXBuildFile; fileRef = D8A83EDB220239AE00A7375E /* JSONDecoderProtocol.swift */; };
 		D8A83EE022023E8600A7375E /* KeyedDecodingContainerProtocol+Helpers.swift in Sources */ = {isa = PBXBuildFile; fileRef = D8A83EDF22023E8600A7375E /* KeyedDecodingContainerProtocol+Helpers.swift */; };
 		D8A83EE5220248CF00A7375E /* PayloadMock.swift in Sources */ = {isa = PBXBuildFile; fileRef = D8A83EE4220248CF00A7375E /* PayloadMock.swift */; };
 		D8A83EE72202493900A7375E /* String+Random.swift in Sources */ = {isa = PBXBuildFile; fileRef = D8A83EE62202493900A7375E /* String+Random.swift */; };
@@ -18,6 +20,8 @@
 		D8A83EEF2202537300A7375E /* Response+Helpers.swift in Sources */ = {isa = PBXBuildFile; fileRef = D8A83EEE2202537300A7375E /* Response+Helpers.swift */; };
 		D8A83EF322025A7900A7375E /* DecodingError+Helpers.swift in Sources */ = {isa = PBXBuildFile; fileRef = D8A83EF222025A7900A7375E /* DecodingError+Helpers.swift */; };
 		D8A83EF72202655900A7375E /* ResponseError+Helpers.swift in Sources */ = {isa = PBXBuildFile; fileRef = D8A83EF62202655900A7375E /* ResponseError+Helpers.swift */; };
+		D8A83EF922036BB600A7375E /* PayloadParserTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = D8A83EF822036BB600A7375E /* PayloadParserTests.swift */; };
+		D8A83EFB22036CAE00A7375E /* JSONDecoderMock.swift in Sources */ = {isa = PBXBuildFile; fileRef = D8A83EFA22036CAE00A7375E /* JSONDecoderMock.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -36,8 +40,10 @@
 		D8A83EBF2202236D00A7375E /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		D8A83EC42202236D00A7375E /* HttpResponseParserTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = HttpResponseParserTests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
 		D8A83ECB2202236D00A7375E /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		D8A83ED52202245100A7375E /* PayloadParser.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PayloadParser.swift; sourceTree = "<group>"; };
 		D8A83ED72202255200A7375E /* ResponseDecodingTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ResponseDecodingTests.swift; sourceTree = "<group>"; };
 		D8A83ED92202366500A7375E /* Response.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Response.swift; sourceTree = "<group>"; };
+		D8A83EDB220239AE00A7375E /* JSONDecoderProtocol.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = JSONDecoderProtocol.swift; sourceTree = "<group>"; };
 		D8A83EDF22023E8600A7375E /* KeyedDecodingContainerProtocol+Helpers.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "KeyedDecodingContainerProtocol+Helpers.swift"; sourceTree = "<group>"; };
 		D8A83EE4220248CF00A7375E /* PayloadMock.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PayloadMock.swift; sourceTree = "<group>"; };
 		D8A83EE62202493900A7375E /* String+Random.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "String+Random.swift"; sourceTree = "<group>"; };
@@ -45,6 +51,8 @@
 		D8A83EEE2202537300A7375E /* Response+Helpers.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "Response+Helpers.swift"; sourceTree = "<group>"; };
 		D8A83EF222025A7900A7375E /* DecodingError+Helpers.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "DecodingError+Helpers.swift"; sourceTree = "<group>"; };
 		D8A83EF62202655900A7375E /* ResponseError+Helpers.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "ResponseError+Helpers.swift"; sourceTree = "<group>"; };
+		D8A83EF822036BB600A7375E /* PayloadParserTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PayloadParserTests.swift; sourceTree = "<group>"; };
+		D8A83EFA22036CAE00A7375E /* JSONDecoderMock.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = JSONDecoderMock.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -91,6 +99,7 @@
 				D8A83EDE22023A3D00A7375E /* Models */,
 				D8A83EBE2202236D00A7375E /* HttpResponseParser.h */,
 				D8A83EBF2202236D00A7375E /* Info.plist */,
+				D8A83ED52202245100A7375E /* PayloadParser.swift */,
 			);
 			path = HttpResponseParser;
 			sourceTree = "<group>";
@@ -100,6 +109,7 @@
 			children = (
 				D8A83EE12202487E00A7375E /* Helpers */,
 				D8A83ECB2202236D00A7375E /* Info.plist */,
+				D8A83EF822036BB600A7375E /* PayloadParserTests.swift */,
 				D8A83ED72202255200A7375E /* ResponseDecodingTests.swift */,
 			);
 			path = HttpResponseParserTests;
@@ -108,6 +118,7 @@
 		D8A83EDD22023A3300A7375E /* Core */ = {
 			isa = PBXGroup;
 			children = (
+				D8A83EDB220239AE00A7375E /* JSONDecoderProtocol.swift */,
 				D8A83EDF22023E8600A7375E /* KeyedDecodingContainerProtocol+Helpers.swift */,
 			);
 			path = Core;
@@ -126,6 +137,7 @@
 			isa = PBXGroup;
 			children = (
 				D8A83EF222025A7900A7375E /* DecodingError+Helpers.swift */,
+				D8A83EFA22036CAE00A7375E /* JSONDecoderMock.swift */,
 				D8A83EE4220248CF00A7375E /* PayloadMock.swift */,
 				D8A83EEE2202537300A7375E /* Response+Helpers.swift */,
 				D8A83EF62202655900A7375E /* ResponseError+Helpers.swift */,
@@ -244,8 +256,10 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				D8A83EDC220239AE00A7375E /* JSONDecoderProtocol.swift in Sources */,
 				D8A83EDA2202366500A7375E /* Response.swift in Sources */,
 				D8A83EED2202519700A7375E /* ResponseError.swift in Sources */,
+				D8A83ED62202245100A7375E /* PayloadParser.swift in Sources */,
 				D8A83EE022023E8600A7375E /* KeyedDecodingContainerProtocol+Helpers.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -256,10 +270,12 @@
 			files = (
 				D8A83EE72202493900A7375E /* String+Random.swift in Sources */,
 				D8A83EF72202655900A7375E /* ResponseError+Helpers.swift in Sources */,
+				D8A83EFB22036CAE00A7375E /* JSONDecoderMock.swift in Sources */,
 				D8A83EE5220248CF00A7375E /* PayloadMock.swift in Sources */,
 				D8A83EF322025A7900A7375E /* DecodingError+Helpers.swift in Sources */,
 				D8A83EEF2202537300A7375E /* Response+Helpers.swift in Sources */,
 				D8A83ED82202255200A7375E /* ResponseDecodingTests.swift in Sources */,
+				D8A83EF922036BB600A7375E /* PayloadParserTests.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
